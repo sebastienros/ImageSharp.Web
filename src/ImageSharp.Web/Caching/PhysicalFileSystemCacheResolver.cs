@@ -46,18 +46,6 @@ namespace SixLabors.ImageSharp.Web.Resolvers
                 this.metaFileInfo.PhysicalPath,
                 this.formatUtilities.GetExtensionFromContentType(this.metadata.ContentType));
 
-            // We are setting buffer size to 1 to prevent FileStream from allocating it's internal buffer
-            // 0 causes constructor to throw
-            // int bufferSize = 1;
-            // var stream = new FileStream(
-            //     path,
-            //     FileMode.Open,
-            //     FileAccess.Read,
-            //     FileShare.Read,
-            //     bufferSize,
-            //     FileOptions.Asynchronous | FileOptions.SequentialScan);
-            // return Task.FromResult<Stream>(stream);
-
             return Task.FromResult<Stream>(File.OpenRead(path));
         }
     }
