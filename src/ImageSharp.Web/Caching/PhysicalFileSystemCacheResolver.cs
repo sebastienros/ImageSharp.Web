@@ -56,7 +56,6 @@ namespace SixLabors.ImageSharp.Web.Resolvers
             //     FileShare.Read,
             //     bufferSize,
             //     FileOptions.Asynchronous | FileOptions.SequentialScan);
-
             // return Task.FromResult<Stream>(stream);
 
             return Task.FromResult<Stream>(File.OpenRead(path));
