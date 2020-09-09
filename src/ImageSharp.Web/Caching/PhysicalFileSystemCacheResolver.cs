@@ -50,7 +50,7 @@ namespace SixLabors.ImageSharp.Web.Resolvers
             // 0 causes constructor to throw
             int bufferSize = 1;
             var stream = new FileStream(
-                this.metaFileInfo.PhysicalPath,
+                path,
                 FileMode.Open,
                 FileAccess.Read,
                 FileShare.Read,
